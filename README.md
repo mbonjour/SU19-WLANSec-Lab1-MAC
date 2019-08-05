@@ -55,7 +55,7 @@ For most of your work, you will need to configure your WiFi interface in monitor
 
 If you are using Kali Linux, most interfaces can be configured with just a single command.
 
-To configure a __Alfa AWUS036H, AWUS036NH, AWUS051NH and most probably, the interface of your own laptop (if you're working with a native Linux Install__ into monitor mode, you will need to use the following command (please verify using ```ifconfig``` that your interface is called ```wlan0```. Otherwise, simply use the right name):
+To configure a __Alfa AWUS036H, AWUS036NH, AWUS051NH (look at the back of your Alfa) and most probably, the interface of your own laptop (if you're working with a native Linux Install__ into monitor mode, you will need to use the following command (please verify using ```ifconfig``` that your interface is called ```wlan0```. Otherwise, simply use the right name):
 
 ```bash
 sudo airmon-ng start wlan0
@@ -129,11 +129,6 @@ The police may also use this method to follow a suspect.
 __ATTENTION__: Tracking an iPhone is no longer possible in most conditions since version 8 of iOS.
 
 * Develop a script in Python/Scapy capable of sniffing the frames necessary for detecting 802.11 clients. The script runs in command line and takes a MAC address as argument. It will run and lets you know when the client (MAC address) has been detected.
- 
-__Question__ : What type of frames are used to detect clients in a passive way ?
-
-__Question__ : why is it no longer possible to detect iPhones since version 8 of iOS ?
-
 
 ### 2. WiFi Clients Talk Too Much (optional... if you're fast enough!!!)
 
@@ -150,6 +145,21 @@ So, every time your scanner prints results, they will look like this:
 00:1B:63:21:10:33 (Apple Inc.) – HEIG-VD, SU19, Seoul, MyWiFi
 00:09:18:10:23:01 (Samsung) – HEIG-VD, Marathon, europa, eduroam
 ```
+
+
+## Questions
+
+__Q1__ : What type of frames are used to detect clients in a passive way?
+
+__Q2__ : why is it no longer possible to detect iPhones since version 8 of iOS?
+
+__Q3__ : what is the purpose of those frames?
+
+__Q4__ : why are these frames not secured?
+
+__Q5__ : what other information can you obtain besides the MAC address?
+
+
 
 ## Deliverables
 
