@@ -16,6 +16,38 @@ You will need to search the Internet in order to learn details about Scapy and t
 
 You will find very good information about Scapy [here](https://scapy.readthedocs.io/en/latest/usage.html).
 
+### Just Some Info to get you Started
+
+Basic sniffing with Scapy is very easy:
+
+```python
+sniff(iface="wlan0mon", prn=handler_function)
+```
+
+This will start sniffing on interface wlan0mon (it needs to be in monitor mode!!!). Every time a frame is sniffed, it will call function ```handler_function``` and pass the frame as an argument:
+
+```
+def handler_function(packet):
+	do_some_stuff_with_your_packet
+```
+
+Reading a pcap file from Scapy is also pretty easy:
+
+```
+a = rdpcap(pcap_filename)
+```
+
+will read ```pcap_filename``` contents into variable ```a```.
+
+
+Writing a pcap file is also easy:
+
+```
+wrpcap(filename, a)
+```
+
+will write the contents of variable ```a``` to file ```filename```.
+
 
 ### Configuring Monitor Mode
 
@@ -23,7 +55,7 @@ For most of your work, you will need to configure your WiFi interface in monitor
 
 If you are using Kali Linux, most interfaces can be configured with just a single command.
 
-To configure a __Alfa AWUS036H, AWUS036NH and most probably, the interface of your own laptop (if you're working with a native Linux Install__ into monitor mode, you will need to use the following command (please verify using ```ifconfig``` that your interface is called ```wlan0```. Otherwise, simply use the right name):
+To configure a __Alfa AWUS036H, AWUS036NH, AWUS051NH and most probably, the interface of your own laptop (if you're working with a native Linux Install__ into monitor mode, you will need to use the following command (please verify using ```ifconfig``` that your interface is called ```wlan0```. Otherwise, simply use the right name):
 
 ```bash
 sudo airmon-ng start wlan0
