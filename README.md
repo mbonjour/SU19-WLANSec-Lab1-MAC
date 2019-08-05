@@ -1,4 +1,5 @@
 # Wireless Networks and Security
+# Homework from Mickael Bonjour, Rachel Gan and Aiko Bilyalova
 
 ## Introduction to Python, Scapy and MAC Security
 
@@ -151,13 +152,18 @@ So, every time your scanner prints results, they will look like this:
 
 __Q1__ : What type of frames are used to detect clients in a passive way?
 
+	Probe request (frame subtype 0x4), passively sniffing we can see it and it's send from the clients.
 __Q2__ : why is it no longer possible to detect iPhones since version 8 of iOS?
-
+	Because they generate random MAC Adresses when they send Probe Request/Response.
+	
 __Q3__ : what is the purpose of those frames?
-
+	 They are used by the client to see if one of the Wireless networks he knows is currently nearby.
+	
 __Q4__ : why are these frames not secured?
-
+	 Because it can't be, it has to be seen by everybody so the AP can listent to it too and answer via a Probe response if needed.
+	
 __Q5__ : what other information can you obtain besides the MAC address?
+	 The recent networks used by the clients, and we have more adresses like  
 
 
 
